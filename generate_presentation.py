@@ -98,7 +98,7 @@ bg(s1)
 
 # Header bar
 box(s1, 0, 0, 13.33, 0.75, fill_color=ACCENT2)
-txt(s1, "Slide 1 of 4", 0.2, 0.08, 3, 0.5,
+txt(s1, "Slide 1 of 6", 0.2, 0.08, 3, 0.5,
     font_size=10, color=LIGHT_GREY)
 txt(s1, "The Challenge – Unexpected Twilio Costs",
     0.3, 0.05, 12.5, 0.7, font_size=26, bold=True, color=WHITE)
@@ -147,7 +147,7 @@ s2 = prs.slides.add_slide(blank_layout)
 bg(s2)
 
 box(s2, 0, 0, 13.33, 0.75, fill_color=ACCENT2)
-txt(s2, "Slide 2 of 4", 0.2, 0.08, 3, 0.5,
+txt(s2, "Slide 2 of 6", 0.2, 0.08, 3, 0.5,
     font_size=10, color=LIGHT_GREY)
 txt(s2, "Our Strategy – A Two-Layered Defence",
     0.3, 0.05, 12.5, 0.7, font_size=26, bold=True, color=WHITE)
@@ -195,7 +195,7 @@ s3 = prs.slides.add_slide(blank_layout)
 bg(s3)
 
 box(s3, 0, 0, 13.33, 0.75, fill_color=ACCENT2)
-txt(s3, "Slide 3 of 4", 0.2, 0.08, 3, 0.5,
+txt(s3, "Slide 3 of 6", 0.2, 0.08, 3, 0.5,
     font_size=10, color=LIGHT_GREY)
 txt(s3, "Defence Layer 1 – The Gatekeeper",
     0.3, 0.05, 12.5, 0.7, font_size=26, bold=True, color=WHITE)
@@ -251,7 +251,7 @@ s4 = prs.slides.add_slide(blank_layout)
 bg(s4)
 
 box(s4, 0, 0, 13.33, 0.75, fill_color=ACCENT2)
-txt(s4, "Slide 4 of 4", 0.2, 0.08, 3, 0.5,
+txt(s4, "Slide 4 of 6", 0.2, 0.08, 3, 0.5,
     font_size=10, color=LIGHT_GREY)
 txt(s4, "Defence Layer 2 – The Speed Limit",
     0.3, 0.05, 12.5, 0.7, font_size=26, bold=True, color=WHITE)
@@ -298,6 +298,174 @@ bullet_block(s4, [
 
 box(s4, 0, 7.15, 13.33, 0.35, fill_color=ACCENT2)
 txt(s4, "SMS Pumping Defence  |  Confidential", 0.3, 7.18, 13, 0.28,
+    font_size=9, color=LIGHT_GREY)
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# SLIDE 5 – Business Value & Next Steps
+# ════════════════════════════════════════════════════════════════════════════
+s5 = prs.slides.add_slide(blank_layout)
+bg(s5)
+
+box(s5, 0, 0, 13.33, 0.75, fill_color=ACCENT2)
+txt(s5, "Slide 5 of 6", 0.2, 0.08, 3, 0.5,
+    font_size=10, color=LIGHT_GREY)
+txt(s5, "Business Value & Next Steps",
+    0.3, 0.05, 12.5, 0.7, font_size=26, bold=True, color=WHITE)
+accent_bar(s5)
+
+# Three value cards
+value_cards = [
+    ("💰  Immediate ROI",
+     "We have successfully shut off the vulnerability that automated scripts "
+     "were exploiting, saving the company from runaway Twilio invoices.\n\n"
+     "The fix costs nothing to run and protects us indefinitely."),
+    ("📈  Predictable Scaling",
+     "As we grow our legitimate user base, our SMS costs will scale directly "
+     "with real human onboarding — not outside bot traffic.\n\n"
+     "Budgeting becomes reliable and tied to actual growth."),
+    ("✨  Zero User Friction",
+     "Both security measures happen in milliseconds behind the scenes.\n\n"
+     "Legitimate users attempting to log in normally will not even notice "
+     "they are there — no extra steps, no delays, no CAPTCHA."),
+]
+
+for i, (heading, body) in enumerate(value_cards):
+    cl = 0.35 + i * 4.35
+    box(s5, cl, 1.1, 4.1, 5.7, fill_color=ACCENT2,
+        line_color=ACCENT, line_width_pt=1.5)
+    # coloured top strip
+    box(s5, cl, 1.1, 4.1, 0.65, fill_color=ACCENT)
+    txt(s5, heading, cl+0.18, 1.17, 3.8, 0.52,
+        font_size=15, bold=True, color=WHITE)
+    txt(s5, body, cl+0.18, 1.85, 3.78, 4.7,
+        font_size=13, color=WHITE)
+
+box(s5, 0, 7.15, 13.33, 0.35, fill_color=ACCENT2)
+txt(s5, "SMS Pumping Defence  |  Confidential", 0.3, 7.18, 13, 0.28,
+    font_size=9, color=LIGHT_GREY)
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# SLIDE 6 – How Our Defence Works (Business-Friendly Diagram)
+# ════════════════════════════════════════════════════════════════════════════
+s6 = prs.slides.add_slide(blank_layout)
+bg(s6)
+
+box(s6, 0, 0, 13.33, 0.75, fill_color=ACCENT2)
+txt(s6, "Slide 6 of 6", 0.2, 0.08, 3, 0.5,
+    font_size=10, color=LIGHT_GREY)
+txt(s6, "How Our Defence Works – At a Glance",
+    0.3, 0.05, 12.5, 0.7, font_size=26, bold=True, color=WHITE)
+accent_bar(s6)
+
+txt(s6, "Every SMS request passes through two automatic checkpoints before we are charged a penny.",
+    0.5, 0.85, 12.3, 0.55, font_size=14, color=LIGHT_GREY, align=PP_ALIGN.CENTER)
+
+# ── Flow diagram ────────────────────────────────────────────────────────────
+# Row 1 (main flow): Request → Checkpoint 1 → Checkpoint 2 → SMS Sent
+# Row 2 (blocked branches below each checkpoint)
+
+GREEN  = RGBColor(0x00, 0xAA, 0x55)
+RED_BG = RGBColor(0x6B, 0x00, 0x00)
+RED_BD = RGBColor(0xFF, 0x44, 0x44)
+
+# Helper: rounded-corner label for flow nodes
+def flow_node(slide, label, sublabel, left, top, w=2.5, h=1.1,
+              fill=ACCENT2, border=ACCENT, lbl_color=WHITE, sub_color=LIGHT_GREY):
+    box(slide, left, top, w, h, fill_color=fill, line_color=border, line_width_pt=2)
+    txt(slide, label, left+0.12, top+0.08, w-0.24, 0.52,
+        font_size=13, bold=True, color=lbl_color, align=PP_ALIGN.CENTER)
+    if sublabel:
+        txt(slide, sublabel, left+0.1, top+0.55, w-0.2, 0.5,
+            font_size=10, color=sub_color, align=PP_ALIGN.CENTER)
+
+# Arrow helper (horizontal ➤)
+def h_arrow(slide, left, top):
+    txt(slide, "➤", left, top, 0.55, 0.45,
+        font_size=20, color=ACCENT, align=PP_ALIGN.CENTER)
+
+# Arrow helper (vertical ↓)
+def v_arrow(slide, left, top):
+    txt(slide, "▼", left, top, 0.45, 0.38,
+        font_size=16, color=RED_BD, align=PP_ALIGN.CENTER)
+
+ROW1_TOP = 1.65   # y of main flow row
+ROW2_TOP = 3.35   # y of blocked-branch row
+
+# Node positions (left edge)
+X_REQ   = 0.25    # "SMS Request"
+X_GATE  = 3.10    # Checkpoint 1
+X_SPEED = 6.55    # Checkpoint 2
+X_SENT  = 10.20   # SMS Sent ✅
+
+NODE_W = 2.55
+NODE_H = 1.1
+
+# ── Main flow nodes ──
+flow_node(s6, "📲  SMS Request", "User taps 'Send Code'",
+          X_REQ, ROW1_TOP, NODE_W, NODE_H, fill=ACCENT2, border=ACCENT)
+
+h_arrow(s6, X_REQ + NODE_W + 0.05, ROW1_TOP + 0.32)
+
+flow_node(s6, "🛡️  Checkpoint 1", "Is this our real app?",
+          X_GATE, ROW1_TOP, NODE_W, NODE_H,
+          fill=RGBColor(0x14, 0x50, 0x8A), border=ACCENT)
+
+h_arrow(s6, X_GATE + NODE_W + 0.05, ROW1_TOP + 0.32)
+
+flow_node(s6, "⏱️  Checkpoint 2", "Is the request rate normal?",
+          X_SPEED, ROW1_TOP, NODE_W, NODE_H,
+          fill=RGBColor(0x14, 0x50, 0x8A), border=ACCENT)
+
+h_arrow(s6, X_SPEED + NODE_W + 0.05, ROW1_TOP + 0.32)
+
+flow_node(s6, "✅  SMS Sent!", "Twilio charged — legitimate user",
+          X_SENT, ROW1_TOP, NODE_W, NODE_H,
+          fill=GREEN, border=RGBColor(0x00, 0xFF, 0x88),
+          lbl_color=WHITE, sub_color=RGBColor(0xCC, 0xFF, 0xCC))
+
+# ── Down-arrows from checkpoints to blocked boxes ──
+v_arrow(s6, X_GATE  + NODE_W/2 - 0.05, ROW1_TOP + NODE_H + 0.05)
+v_arrow(s6, X_SPEED + NODE_W/2 - 0.05, ROW1_TOP + NODE_H + 0.05)
+
+# ── Blocked branch boxes ──
+BLOCK_W = 3.0
+BLOCK_H = 1.55
+
+# Checkpoint 1 blocked
+box(s6, X_GATE - 0.2, ROW2_TOP, BLOCK_W, BLOCK_H,
+    fill_color=RED_BG, line_color=RED_BD, line_width_pt=2)
+txt(s6, "❌  Blocked — FREE",
+    X_GATE - 0.08, ROW2_TOP + 0.07, BLOCK_W - 0.24, 0.42,
+    font_size=13, bold=True, color=RED_BD, align=PP_ALIGN.CENTER)
+txt(s6, "Bot / script without\na valid app token.\nCost to us: $0",
+    X_GATE - 0.08, ROW2_TOP + 0.48, BLOCK_W - 0.24, 1.0,
+    font_size=11, color=LIGHT_GREY, align=PP_ALIGN.CENTER)
+
+# Checkpoint 2 blocked
+box(s6, X_SPEED - 0.2, ROW2_TOP, BLOCK_W, BLOCK_H,
+    fill_color=RED_BG, line_color=RED_BD, line_width_pt=2)
+txt(s6, "⚠️  Throttled — FREE",
+    X_SPEED - 0.08, ROW2_TOP + 0.07, BLOCK_W - 0.24, 0.42,
+    font_size=13, bold=True, color=YELLOW, align=PP_ALIGN.CENTER)
+txt(s6, "Too many requests too fast.\nSystem says 'Please wait'.\nCost to us: $0",
+    X_SPEED - 0.08, ROW2_TOP + 0.48, BLOCK_W - 0.24, 1.0,
+    font_size=11, color=LIGHT_GREY, align=PP_ALIGN.CENTER)
+
+# ── Legend / takeaway banner ──
+box(s6, 0.35, 5.2, 12.6, 1.55, fill_color=ACCENT2,
+    line_color=YELLOW, line_width_pt=1.5)
+txt(s6, "🔑  Key Takeaway for the Business",
+    0.55, 5.25, 6, 0.45, font_size=14, bold=True, color=YELLOW)
+bullet_block(s6, [
+    "Only real users on our genuine app can ever reach the 'SMS Sent' step — protecting our budget automatically.",
+    "The system is fully invisible to legitimate customers and requires no manual intervention.",
+    "Both checkpoints run in under 50 milliseconds — no perceptible delay for users.",
+], 0.55, 5.65, 12.1, 1.0, font_size=12, icon="✔")
+
+box(s6, 0, 7.15, 13.33, 0.35, fill_color=ACCENT2)
+txt(s6, "SMS Pumping Defence  |  Confidential", 0.3, 7.18, 13, 0.28,
     font_size=9, color=LIGHT_GREY)
 
 
